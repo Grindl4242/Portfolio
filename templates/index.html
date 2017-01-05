@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio</title>
+</head>
+<body>
+  {% for item in data %}
+    <div class="el_wraper">
+      {% for row in item %}
+        {% if row=="name" %}
+          <div><a href="http://127.0.0.1:5000/projects/{{item[row]}}">{{item[row]}}</a></div>
+        {% else %}
+          <div>{{ item[row] }}</div>
+        {% endif %}
+      {% endfor %}
+    </div><br>
+  {% endfor %}
+
+</body>
+</html>
